@@ -25,7 +25,7 @@ const chatInfoRouter = require('./Routers/Chat/chatInfoRouter');
 const {sendMessage, Chat} = require('./Routers/Chat/chatsRouter');
 
 app.use((req, res, next) => {
-	res.setHeader("Access-Control-Allow-Origin", 'http://localhost:3000')
+	res.setHeader("Access-Control-Allow-Origin", 'http://20.245.96.241')
 	res.setHeader("Access-Control-Allow-Methods", 'GET, POST, DELETE')
 	res.setHeader("Access-Control-Allow-Headers", 'Content-Type', "Authorization")
 	next();
