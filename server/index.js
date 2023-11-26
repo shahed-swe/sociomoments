@@ -12,6 +12,7 @@ const PORT = process.env.PORT || 5000;
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
+app.use(cors());
 
 const indexRouter = require('./Routers/indexRouter');
 const userRouter = require('./Routers/userRouter');
@@ -72,13 +73,13 @@ app.use(function (req, res, next) {
 server.listen(PORT, ()=> console.log(`Server has started on port ${PORT}`))
 
 app.use(express.json());
-app.use(cors());
+
 
 
 const uri = process.env.ATLAS_URI;
 
 const connectToMongo = async () => {
-	const mongoURI = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/ochuba";
+	const mongoURI = process.env.MONGO_URI;
 
 	await mongoose.connect(uri)
 		.then(() => {
