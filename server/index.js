@@ -13,6 +13,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 app.use(cors());
+app.use(cors({ origin: 'http://20.245.96.241' }));
 
 const indexRouter = require('./Routers/indexRouter');
 const userRouter = require('./Routers/userRouter');
