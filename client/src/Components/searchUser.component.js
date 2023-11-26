@@ -31,7 +31,7 @@ const SearchUser = () => {
     }
 
     return (
-        <div className="container">
+        <div className="container" style={{ backgroundColor: "##D3D3D3" }}>
             <div className="margin box box-shadow">
                 <div className="form-group">
                     <p className="form-label">Search for username:</p>

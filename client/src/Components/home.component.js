@@ -163,7 +163,7 @@ const Home = () => {
     }
 
     return (
-        <div className="container">
+        <div className="container" style={{ backgroundColor: "#A9A9A9" }}>
             <div className="home">
                 {posts.length !== 0 ? (
                     [posts.map((post, index) => {

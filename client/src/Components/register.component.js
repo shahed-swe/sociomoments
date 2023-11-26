@@ -53,7 +53,7 @@ const Register = () => {
         }
     }
     return (
-        <div className="container">
+        <div className="container" style={{ backgroundColor: "##D3D3D3" }}>
             <form className="margin box box-shadow bg-light text-dark" onSubmit={register}>
                 <h1 className="box-title">Register your account</h1>
                 <div className="form-group">

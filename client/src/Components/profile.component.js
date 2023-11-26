@@ -113,7 +113,7 @@ const Profile = (props) => {
             .catch(err => console.log(err))
     }
     return (
-        <div className="container margin">
+        <div className="container margin" style={{ backgroundColor: "##D3D3D3" }}>
             {loading ? <h1>Loading...</h1>
                 : [(!available ? <h1 className="box-title" key={isLoggedIn._id}>Sorry, this page is unavailable, please<Link to="/" className="link"> go back</Link></h1> :
                     <div key={isLoggedIn._id}>

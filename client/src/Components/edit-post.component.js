@@ -82,7 +82,7 @@ const EditPost = (params) => {
     }
 
     return (
-        <div className="container">
+        <div className="container" style={{ backgroundColor: "##D3D3D3" }}>
             {isOwner ?
                 [(postInfo
                     ? <form className="margin box box-shadow" onSubmit={Submit} key={postInfo.description}>
