@@ -55,9 +55,9 @@ router.get('/get/tagged/:user', (req, res) => {
     .catch(err => res.status(400).json("Error: "+err));
 })
 
-router.get("/get/:user", (req, res)=> {
+router.get("/get/allpost", (req, res)=> {
     const skip = req.query.skip && /^\d+$/.test(req.query.skip) ? Number(req.query.skip) : 0
-    Post.find({user: req.params.user}, undefined, {skip, limit: 1}).sort({_id: -1})
+    Post.find()
     .then(result => res.json(result))
     .catch(err => res.status(400).json("Error: "+err));
 })

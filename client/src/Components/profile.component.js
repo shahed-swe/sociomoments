@@ -11,7 +11,7 @@ const user_available = async (username) => {
     await Axios.get(`${BACKEND_URL}/users`)
         .then(res => {
             (res.data).forEach((i) => {
-                if (i.username.toLowerCase() === username) available = true
+                if (i?.username?.toLowerCase() === username) available = true
             })
         })
     return available
@@ -65,7 +65,7 @@ const Profile = (props) => {
             Axios.get(`${BACKEND_URL}/users`)
                 .then(res => {
                     (res.data).forEach((i) => {
-                        if (i.username.toLowerCase() === username) {
+                        if (i?.username?.toLowerCase() === username) {
                             const token = cookie.load('token');
                             if (i.profile_picture) setProfilePicture(BACKEND_URL + '/' + i.profile_picture.filename);
                             if (i.token === token) SetIsOwner(true);
@@ -149,15 +149,15 @@ const Profile = (props) => {
                         <div className="activity-info profile">
                             <div className="profile-bar">
                                 <h5>Posts</h5>
-                                <span>{posts.length}</span>
+                                <span>{posts?.length}</span>
                             </div>
                             <div className="profile-bar">
                                 <h5>Followers</h5>
-                                <span>{follower.length}</span>
+                                <span>{follower?.length}</span>
                             </div>
                             <div className="profile-bar">
                                 <h5>Following</h5>
-                                <span>{following.length}</span>
+                                <span>{following?.length}</span>
                             </div>
                         </div>
                         <div className="row posts">

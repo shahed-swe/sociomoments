@@ -77,7 +77,19 @@ app.use(cors());
 
 const uri = process.env.ATLAS_URI;
 
-mongoose.connect(uri, {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true});
+const connectToMongo = async () => {
+	const mongoURI = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/ochuba";
+
+	await mongoose.connect(uri)
+		.then(() => {
+			console.log(`Connected to MongoDB at ${uri}`);
+		})
+		.catch((error) => {
+			console.error(`Error connecting to MongoDB at ${uri}:`, error);
+		});
+};
+
+connectToMongo()
 
 const connection = mongoose.connection;
 
