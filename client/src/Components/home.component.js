@@ -25,7 +25,7 @@ async function check_token() {
 
 const Home = () => {
     const [userInfo, setUserInfo] = useState('');
-    const [posts, setPosts] = useState(null);
+    const [posts, setPosts] = useState([]);
     const [skip, setSkip] = useState(0);
     const [likeInfo, setLikeInfo] = useState({});
     const [totalLikes, setTotalLikes] = useState({});
@@ -165,12 +165,12 @@ const Home = () => {
     return (
         <div className="container">
             <div className="home">
-                {posts !== null && posts.length !== 0 ? (
+                {posts.length !== 0 ? (
                     [posts.map((post, index) => {
                         return <GeneratePost post={post} key={index} />
                     })]
                 )
-                    : posts === null ? <h1>Loading...</h1> : <h1>No Posts uploaded yet</h1>}
+                    : <h1>No Posts Uploaded Yet</h1>}
             </div>
         </div>
     )
