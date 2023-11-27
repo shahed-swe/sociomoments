@@ -35,7 +35,7 @@ const Register = () => {
         } else { setError('') }
     }, [username])
 
-    const register = (e) => {
+    const register = async (e) => {
         e.preventDefault();
         if (username.length >= 3 && password === confirmation) {
             const User = {
@@ -43,7 +43,7 @@ const Register = () => {
                 password: password,
                 email: email
             }
-            axios.post(`${BACKEND_URL}/users/register`, User)
+            await axios.post(`${BACKEND_URL}/users/register`, User)
                 .then(res => {
                     console.log(res);
                     cookie.save('token', res.data.token, { path: '/' })
