@@ -11,15 +11,15 @@ const Register = () => {
     const [email, setEmail] = useState('');
     const [error, setError] = useState('');
 
-    useEffect(() => {
-        const token = cookie.load('token');
-        axios.get(`${BACKEND_URL}/users`)
-            .then(res => {
-                (res.data).forEach(i => {
-                    if (i.token === token) window.location = "/";
-                })
-            })
-    })
+    // useEffect(() => {
+    //     const token = cookie.load('token');
+    //     axios.get(`${BACKEND_URL}/users`)
+    //         .then(res => {
+    //             (res.data).forEach(i => {
+    //                 if (i.token === token) window.location = "/";
+    //             })
+    //         })
+    // })
 
     useEffect(() => {
         if (password !== confirmation) {

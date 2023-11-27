@@ -24,7 +24,7 @@ router.post('/register',jsonParser, (req, res)=>{
     const newUser = new User({'username': username, 'password': password, "token":token, "email": email});
     newUser.save()
     .then(()=> res.json({"message": "User added!", "token":token}))
-    .catch(()=> res.status(400).json("The username has been taken"))
+    .catch((error)=> console.log(error))
 })
 
 router.post('/login', jsonParser, (req, res)=> {
