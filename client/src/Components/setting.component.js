@@ -48,7 +48,7 @@ const Setting = () => {
             .catch(() => setError('Something went wrong. Please try again'));
     }
     return (
-        <div className="container" style={{ backgroundColor: "##D3D3D3" }}>
+        <div className="container"   >
             {UserInfo ?
                 <div>
                     <form className="margin box box-shadow text-dark" onSubmit={ChangePassword}>

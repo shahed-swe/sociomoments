@@ -48,7 +48,7 @@ const Navbar = () => {
         window.location = "/login";
     }
     return (
-        <nav className="navbar nav-effect bg-white text-dark" style={{ backgroundColor:"#A9A9A9"}}>
+        <nav className="navbar nav-effect bg-white text-dark">
             <div className="container">
                 <Link to="/" className="nav-logo">SocialApp</Link>
                 <span id="nav-icon" className="nav-icon" data-target="nav-list">&#x2630;</span>

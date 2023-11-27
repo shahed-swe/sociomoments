@@ -35,7 +35,7 @@ const Register = () => {
         } else { setError('') }
     }, [username])
 
-    const register = async (e) => {
+    const register = (e) => {
         e.preventDefault();
         if (username.length >= 3 && password === confirmation) {
             const User = {
@@ -43,7 +43,7 @@ const Register = () => {
                 password: password,
                 email: email
             }
-            await axios.post(`${BACKEND_URL}/users/register`, User)
+            axios.post(`${BACKEND_URL}/users/register`, User)
                 .then(res => {
                     console.log(res);
                     cookie.save('token', res.data.token, { path: '/' })
@@ -53,7 +53,7 @@ const Register = () => {
         }
     }
     return (
-        <div className="container" style={{ backgroundColor: "##D3D3D3" }}>
+        <div className="container"   >
             <form className="margin box box-shadow bg-light text-dark" onSubmit={register}>
                 <h1 className="box-title">Register your account</h1>
                 <div className="form-group">

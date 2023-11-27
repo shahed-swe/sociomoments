@@ -37,7 +37,7 @@ const Login = () => {
     }
 
     return (
-        <div className="container" style={{ backgroundColor: "##D3D3D3" }}>
+        <div className="container"   >
             <form className="box bg-light text-dark box-shadow margin" onSubmit={Submit}>
                 <h1 className="box-title">Login your account</h1>
                 <div className="form-group">

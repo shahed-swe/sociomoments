@@ -83,7 +83,7 @@ const CreatePost = () => {
             .catch(err => console.log(err))
     }
     return (
-        <div className="container my-5" style={{ backgroundColor: "##D3D3D3" }}>
+        <div className="container my-5"   >
             <form className="margin box box-shadow bg-light text-dark" onSubmit={Submit}>
                 <h4 className="form-error">{error}</h4>
                 <div className="form-group">

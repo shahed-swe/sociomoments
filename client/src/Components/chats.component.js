@@ -107,7 +107,7 @@ const Chats = ({ location }) => {
     return (
         <div>
             {to && userInfo ?
-                <div className="container" style={{ backgroundColor: "##D3D3D3" }}>
+                <div className="container">
                     {(userList.length !== 0 && userList.indexOf(to) === -1) || userInfo.username === to ?
                         <h3 className="box-title text-dark">The user you are looking for is unavailable for some reasons. &nbsp;
                     <NavLink to="/" className="link">Back to home page</NavLink></h3>
@@ -140,7 +140,7 @@ const Chats = ({ location }) => {
                         </div>
                     }
                 </div>
-                : <div className="container" style={{ backgroundColor: "##D3D3D3" }}>
+                : <div className="container"   >
                     <div className="margin box box-shadow">
                         <div className="form-group">
                             <p className="form-label">Select user to chat with:</p>

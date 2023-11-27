@@ -142,7 +142,7 @@ const Post = (params) => {
     }, [comments])
 
     return (
-        <div className="container" style={{ backgroundColor: "##D3D3D3" }}>
+        <div className="container"   >
             {postInfo
                 ?
                 <div className="margin-top-bottom">
