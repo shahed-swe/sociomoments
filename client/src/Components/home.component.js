@@ -165,7 +165,7 @@ const Home = () => {
     return (
         <div className="container">
             <div className="home">
-                {posts.length !== 0 ? (
+                {posts !== null && posts.length !== 0 ? (
                     [posts.map((post, index) => {
                         return <GeneratePost post={post} key={index} />
                     })]
