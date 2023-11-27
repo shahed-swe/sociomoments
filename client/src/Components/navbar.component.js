@@ -50,7 +50,7 @@ const Navbar = () => {
     return (
         <nav className="navbar nav-effect bg-white text-dark">
             <div className="container">
-                <Link to="/" className="nav-logo">SocialApp</Link>
+                <Link to="/" className="nav-logo"> <div style={{"display":"flex"}}><div>MSharing</div> <div style={{marginLeft:"0.2rem"}}> Application</div></div></Link>
                 <span id="nav-icon" className="nav-icon" data-target="nav-list">&#x2630;</span>
                 <ul className="nav-list" id="nav-list">
                     {PP === null
