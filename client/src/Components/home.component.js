@@ -25,7 +25,7 @@ async function check_token() {
 
 const Home = () => {
     const [userInfo, setUserInfo] = useState('');
-    const [posts, setPosts] = useState([]);
+    const [posts, setPosts] = useState(null);
     const [skip, setSkip] = useState(0);
     const [likeInfo, setLikeInfo] = useState({});
     const [totalLikes, setTotalLikes] = useState({});
@@ -170,7 +170,7 @@ const Home = () => {
                         return <GeneratePost post={post} key={index} />
                     })]
                 )
-                    : <h1>Loading...</h1>}
+                    : posts === null ? <h1>Loading...</h1> : <h1>No Posts uploaded yet</h1>}
             </div>
         </div>
     )
